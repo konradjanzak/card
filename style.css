@@ -44,7 +44,6 @@ html {
 body {
     margin: 0 auto;
     background-color: var(--whiteColor);
-    max-width: 1440px;
     position: relative;
 }
 
