@@ -1,9 +1,8 @@
 :root {
-    --bcgColor: white;
+    --whiteColor: #fff;
     --fontColor: #333;
-    --brownFontColor: #887165;
-    --greyColor: rgb(31, 80, 58);
-    --beigeColor: #C6D5EC;
+    --brownColor: #9C655C;
+    --greenColor: rgb(31, 80, 58);
 }
 
 * {
@@ -25,14 +24,13 @@
     filter: invert(0%);
     opacity: .7;
     z-index: -2;
-    background-color: rgb(255, 255, 255);
     background-color: linear-gradient(180deg, rgba(255, 255, 255, 0.500437675070028) 0%, rgba(255, 255, 255, 1) 50%);
 }
 
 .bcgColor {
     width: 100%;
     height: 100%;
-    background: rgb(255, 255, 255);
+    background-color: rgb(255, 255, 255);
     background: linear-gradient(180deg, rgba(255, 255, 255, 0.500437675070028) 75%, rgba(255, 255, 255, 1) 100%);
 }
 
@@ -44,11 +42,11 @@ html {
 }
 
 body {
-    background-color: var(--bcgColor);
+    margin: 0 auto;
+    background-color: var(--whiteColor);
     max-width: 1440px;
+    position: relative;
 }
-
-
 
 /* HEADER */
 
@@ -61,7 +59,7 @@ header {
     display: none;
 }
 
-h1.nameSurname {
+.nameSurname {
     font-family: 'Bungee', cursive;
     position: absolute;
     top: 45%;
@@ -71,12 +69,12 @@ h1.nameSurname {
     transform: translate(-50%, -50%);
     font-size: 8rem;
     text-transform: uppercase;
-    color: #9C655C;
+    color: var(--brownColor);
     letter-spacing: 4px;
     padding: 0;
 }
 
-h2.profession {
+.profession {
     font-family: 'Bungee', cursive;
     position: absolute;
     top: 60%;
@@ -85,8 +83,7 @@ h2.profession {
     text-align: center;
     transform: translate(-50%, -50%);
     font-size: 5rem;
-    color: #9C655C;
-
+    color: var(--brownColor);
 }
 
 nav {
@@ -108,7 +105,6 @@ nav {
     letter-spacing: 3px;
     text-transform: uppercase;
     transform: translateY(-50%);
-
 }
 
 .burger {
@@ -119,7 +115,6 @@ nav {
     width: 30px;
     transform: translateY(-50%);
     transition: .30s .30s, transform .2s;
-
     z-index: 1;
 }
 
@@ -192,9 +187,8 @@ nav {
 
 .nav a:hover {
     transform: scale(1.2);
-    background-color: #9C655C;
-    color: white;
-
+    background-color: var(--brownColor);
+    color: var(--whiteColor);
 }
 
 .arrow {
@@ -238,7 +232,6 @@ nav {
     100% {}
 }
 
-
 .arrow span {
     position: absolute;
     bottom: -50%;
@@ -263,12 +256,11 @@ nav {
     transform: scale(1.1);
 }
 
-
 /* MAIN SECTION */
 
-h1 {
+.sectionName {
     font-size: 2.6rem;
-    color: var(--brownFontColor);
+    color: var(--brownColor);
     letter-spacing: 4px;
     font-family: 'Bungee', cursive;
     padding-bottom: 10%;
@@ -301,7 +293,7 @@ h1 {
     top: 50%;
     right: 10%;
     height: 40vw;
-    background-color: #9C655C;
+    background-color: var(--brownColor);
     width: 40vw;
     transform: translateY(-50%);
 }
@@ -329,18 +321,16 @@ h1 {
     border-right: 20vw solid transparent;
 }
 
-.about h1 {
+.about .sectionName {
     margin-top: 10%;
-    color: var(--greyColor);
+    color: var(--greenColor);
 }
 
 .about p {
     text-align: left;
     line-height: 4.4rem;
-    color: var(--greyColor);
+    color: var(--greenColor);
 }
-
-
 
 /* TECHNOLOGIES SECTION */
 
@@ -356,7 +346,7 @@ h1 {
     top: 0;
     left: 0;
     min-height: 80vh;
-    background-color: var(--greyColor);
+    background-color: var(--greenColor);
     width: 100vw;
     z-index: -2;
 }
@@ -379,12 +369,12 @@ h1 {
     transform: translateY(-50%);
 }
 
-.technologies h1 {
-    color: white;
+.technologies .sectionName {
+    color: var(--whiteColor);
 }
 
 .technologies p {
-    color: white;
+    color: var(--whiteColor);
 }
 
 .icons {
@@ -395,15 +385,12 @@ h1 {
 i {
     flex-grow: 1;
     font-size: 8rem;
-    color: white;
+    color: var(--whiteColor);
     transition: .5s;
 }
 
-.fa-html5:hover,
-.fa-css3-alt:hover,
-.fa-js:hover,
-.fa-sass:hover {
-    color: #9C655C;
+.fab:hover {
+    color: var(--brownColor);
 }
 
 .fa-git-alt,
@@ -420,7 +407,6 @@ i {
     margin-top: 10%;
 }
 
-
 .projects .wrapper1 {
     position: absolute;
     top: 10%;
@@ -432,10 +418,10 @@ i {
     transition: .3s;
 }
 
-.projects h1 {
+.projects .sectionName {
     padding: 0;
     margin: 10% 10% 10%;
-    color: #9C655C;
+    color: var(--brownColor);
 }
 
 .wrapper1 .sqr {
@@ -443,7 +429,7 @@ i {
     margin: 5% 0;
     width: 30vh;
     height: 40vh;
-    background-color: var(--greyColor);
+    background-color: var(--greenColor);
     transition: .2s;
 }
 
@@ -457,10 +443,8 @@ i {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    color: white;
+    color: var(--whiteColor);
 }
-
-
 
 .wrapper1 .sqr:hover p {
     opacity: 0;
@@ -472,7 +456,7 @@ i {
     transform: translate(-50%, -50%);
     opacity: 0;
     text-decoration: none;
-    color: #333;
+    color: var(--fontColor);
     transition: .3s, font-size .3s .2s;
 }
 
@@ -486,7 +470,6 @@ i {
     left: 110%;
 }
 
-
 .wrapper1 .sqr:hover a {
     opacity: 1;
     left: 50%;
@@ -497,7 +480,6 @@ i {
     color: #000;
 }
 
-
 .arrows {
     position: absolute;
     bottom: 10%;
@@ -505,7 +487,7 @@ i {
 }
 
 .arrows i {
-    color: #9C655C;
+    color: var(--brownColor);
     font-size: 4.6rem;
     padding: 0 10px;
 }
@@ -514,7 +496,6 @@ i {
     transform: translateX(calc(-50% - 10%)) translateY(-50%);
 }
 
-
 /* CONTACT SECTION */
 
 .contact {
@@ -522,15 +503,15 @@ i {
     width: 100%;
     padding: 5%;
     height: 85vh;
-    background-color: #1F4F39;
+    background-color: var(--greenColor);
     margin-top: 5%;
-    color: white;
+    color: var(--whiteColor);
 }
 
-.contact h1 {
+.contact .sectionName {
     width: 100%;
     text-align: center;
-    color: white;
+    color: var(--whiteColor);
 }
 
 .text {
@@ -562,14 +543,20 @@ i {
     text-transform: uppercase;
 }
 
-.phone h2,
-.mail h2 {
+.phone h3,
+.mail h3 {
     font-size: 2.2rem;
-    color: var(--brownFontColor);
+    color: var(--brownColor);
 }
 
-.phone p,
-.mail p {
+.mail a {
+    display: block;
+    color: var(--whiteColor);
+    text-decoration: none;
+}
+
+.mail a,
+.phone p {
     position: relative;
     font-size: 1.8rem;
     margin-top: 1.8rem;
@@ -578,29 +565,31 @@ i {
 }
 
 .phone p::after,
-.mail p::after {
+.mail a::after {
     position: absolute;
     width: 100%;
     content: "";
     height: 1px;
-    background-color: #fff;
+    background-color: var(--whiteColor);
     bottom: 0;
     left: -100%;
     transition: .5s cubic-bezier(.17, .67, .83, .67);
 }
 
 .phone p:hover::after,
-.mail p:hover::after {
+.mail a:hover::after {
     left: 0;
 }
 
-.footer {
+footer {
     position: absolute;
-    bottom: 5%;
+    bottom: 0;
     left: 50%;
-    transform: translateX(-50%);
+    margin: 10px 0;
     font-size: 1.6rem;
     letter-spacing: 2px;
+    color: var(--whiteColor);
+    transform: translateX(-50%)
 }
 
 /* CLASS FOR JS */
@@ -616,29 +605,26 @@ i {
     transform: translateX(0);
 }
 
-
 @media (max-width: 1400px) {
-    h1.nameSurname {
+    .nameSurname {
         font-size: 6rem;
     }
 
-    h2.profession {
+    .profession {
         font-size: 4rem;
     }
 
     .about .wrapper {
         padding: 3% 3% 3% 10%;
     }
-
-
 }
 
 @media (max-width: 1240px) {
-    h1.nameSurname {
+    .nameSurname {
         font-size: 5rem;
     }
 
-    h2.profession {
+    .profession {
         font-size: 3rem;
     }
 
@@ -711,12 +697,10 @@ i {
     .text p {
         font-size: 1.8rem;
     }
-
 }
 
 
 @media (orientation: portrait) and (max-width: 1024px) {
-
     .logo {
         left: 5vw;
     }
@@ -729,12 +713,11 @@ i {
         background-size: cover;
     }
 
-
-    h1.nameSurname {
+    .nameSurname {
         font-size: 6rem;
     }
 
-    h2.profession {
+    .profession {
         top: 50%;
         font-size: 3rem;
     }
@@ -765,9 +748,9 @@ i {
         right: 5%;
     }
 
-    .about h1 {
+    .about .sectionName {
         margin-top: 0%;
-        color: var(--greyColor);
+        color: var(--greenColor);
     }
 
     .about p {
@@ -811,7 +794,7 @@ i {
         height: 65vh;
     }
 
-    .contact h1 {
+    .contact .sectionName {
         margin-top: 5%;
     }
 
@@ -827,32 +810,28 @@ i {
     .text p {
         font-size: 2rem;
     }
-
 }
 
 @media (orientation: portrait) and (min-width: 768px) {
-    h1.nameSurname {
+    .nameSurname {
         top: 45%;
         font-size: 5rem;
     }
 
-    h2.profession {
+    .profession {
         top: 55%;
         font-size: 2.5rem;
     }
-
 }
 
 @media (orientation: portrait) and (min-width: 360px) {
-
-
-    h1.nameSurname {
+    .nameSurname {
         top: 45%;
         font-size: 4rem;
         width: 100vw;
     }
 
-    h2.profession {
+    .profession {
         top: 55%;
         font-size: 3rem;
         width: 100vw;
@@ -890,7 +869,7 @@ i {
         display: none;
     }
 
-    .about h1 {
+    .about .sectionName {
         margin-top: 10%;
 
     }
@@ -898,7 +877,7 @@ i {
     .about p {
         text-align: justify;
         line-height: 2.6rem;
-        color: var(--greyColor);
+        color: var(--greenColor);
     }
 
     .technologies {
@@ -920,12 +899,12 @@ i {
         width: 100vw;
     }
 
-    .technologies h1 {
-        color: white;
+    .technologies .sectionName {
+        color: var(--whiteColor);
     }
 
     .technologies p {
-        color: white;
+        color: var(--whiteColor);
     }
 
     .icons {
@@ -951,15 +930,14 @@ i {
         font-size: 1.8rem;
     }
 
-    .phone h2,
-    .mail h2 {
+    .phone h3,
+    .mail h3 {
         font-size: 2rem;
     }
 
     .phone p,
-    .mail p {
+    .mail a {
         font-size: 1.4rem;
         margin-top: 1.4rem;
     }
-
 }
